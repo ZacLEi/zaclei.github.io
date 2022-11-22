@@ -87,7 +87,7 @@ fun_features:
 
     # 打印速度，数字越大越慢
     # Typing speed, the larger the number, the slower
-    typeSpeed: 70
+    typeSpeed: 50
 
     # 游标字符
     # Cursor character
@@ -232,10 +232,25 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
-
+#  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js # 动态彩带
+#  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/runtime.min.js # 运行时间
+  # - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Ribbon.min.js # 静态彩带
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicLine.min.js # 动态黑色线条
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/snowflake.min.js # 小雪花飘落
+  # - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Cherry.min.js #樱花飘落
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/star.min.js # 鼠标跟随小星星
+  # - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js # 鼠标点击出字
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/love.min.js #鼠标点击出爱心
+  - /js/musicshow.js
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+#  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/shubiao.css #鼠标指针
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css # 滚动条颜色
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css # 头部打字机颜色效果渐变
+  - /css/indeximg-hover.css
+  - /css/mac-code-style.css
+  - /css/custom.styl
 
 # 网页访问统计
 # Analysis of website visitors
@@ -293,6 +308,18 @@ web_analytics:  # 网页访问统计
     # 开启后不统计本地路径( localhost 与 127.0.0.1 )
     # If true, ignore localhost & 127.0.0.1
     ignore_local: false
+
+# custom head
+# 添加语句
+# <p id="hitokoto">:D 获取中...</p>
+custom_head: '
+    <!-- 一言 -->
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+    '
+
+# 热力图
+# <img src="https://ghchart.rshah.org/emoryhuang" alt="emoryhuang's Github chart" />
+
 
 # 对页面中的图片和评论插件进行懒加载处理，可见范围外的元素不会提前加载
 # Lazy loading of images and comment plugin on the page
@@ -424,13 +451,17 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-      <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
-      <div style="font-size: 0.85rem">
-        <span id="timeDate">载入天数...</span>
-        <span id="times">载入时分秒...</span>
-        <script src="/js/duration.js"></script>
+          <div id="music_div" style="position: fixed; bottom: 0px; left: 30px;">
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110
+              	src="//music.163.com/outchain/player?type=0&id=919444742&auto=1&height=90">
+              </iframe>
+              <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+              <script src="/js/musicshow.js"></script>
+          </div>
+          <div style="font-size: 0.85rem">
+          <span id="timeDate">载入天数...</span>
+          <span id="times">载入时分秒...</span>
+          <script src="source/js/duration.js"></script>
       </div>
     '
 
@@ -467,7 +498,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -486,7 +517,7 @@ index:
 
     # 为空则按 hexo config.subtitle 显示
     # If empty, text based on `subtitle` in hexo config
-    text: "表姑在温州搞批发～"
+    text: '表姑在温州搞开发～'
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
@@ -495,7 +526,7 @@ index:
 
       # 请求地址
       # Request url
-      url: ""
+      url: "https://v1.hitokoto.cn/"
 
       # 请求方法
       # Request method
@@ -508,7 +539,7 @@ index:
 
       # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
       # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
-      keys: []
+      keys: ["hitokoto"]
 
   # 自动截取文章摘要
   # Auto extract post
@@ -539,7 +570,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -894,7 +925,7 @@ giscus:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -905,7 +936,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -934,7 +965,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
@@ -951,7 +982,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/avatar.png
@@ -973,7 +1004,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -984,7 +1015,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
   # 重定向到首页的延迟(毫秒)
@@ -998,7 +1029,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/background.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
@@ -1052,7 +1083,9 @@ links:
 # Be aware that you would better use the same version as default ones to avoid potential problems.
 # DO NOT EDIT THE FOLLOWING SETTINGS UNLESS YOU KNOW WHAT YOU ARE DOING
 #---------------------------
-
+music:
+  enable: true
+  autoplay: true
 static_prefix:
   # 内部静态
   # Internal static

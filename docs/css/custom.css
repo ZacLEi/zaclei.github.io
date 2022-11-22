@@ -1,0 +1,143 @@
+.category .row {
+  border-radius: 1rem;
+}
+.category .category-item {
+  border-radius: 1rem;
+}
+.category .category-post-list {
+  border-radius: 1rem;
+}
+.list-group {
+  border-radius: 1rem;
+}
+.list-group-item {
+  border-radius: 1rem;
+}
+.links .card-body {
+  border-radius: 1rem;
+}
+.navbar .nav-item .nav-link {
+  border-radius: 0.5rem;
+}
+.navbar .dropdown-menu {
+  border-radius: 0.5rem;
+}
+.navbar .dropdown-item {
+  border-radius: 0.25rem;
+}
+#board {
+  border-radius: 1rem;
+}
+#scroll-top-button {
+  border-radius: 0.5rem;
+}
+.copy-btn {
+  font-size: 1rem;
+  color: #2f4f4f;
+}
+.copy-btn > i {
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+[data-user-color-scheme='dark'] .copy-btn {
+  color: #c4c6c9;
+  transition: color 0.2s ease-in-out;
+}
+/* 代码和表格设置最大高度，高度或宽度超出都不会显示在页面中，可以通过滚动条查看 */
+table {
+  padding: 0;
+  word-break: initial;
+  overflow-x: auto;
+  max-height: 22em;
+  overflow-y: auto !important;
+}
+/*鼠标*/
+body,
+header,
+div.mask.flex-center,
+div.scroll-down-bar,
+#banner.banner,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a11.cur"), auto;
+}
+a:hover,
+button:hover,
+i:hover {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+#rightside>div>button,
+#rightside>div>a {
+  display: block;
+  margin-bottom: 2px;
+  width: 30px;
+  height: 30px;
+  color: var(--btn-color);
+  text-align: center;
+  font-size: 16px;
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+/* 文章标签 */
+.layout_post .tag_share .post-meta__tags {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+/* 评论区 */
+.vcol * {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+.v[data-class=v] .vicon {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+.v[data-class=v] .vbtn {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+/* 回复 */
+.vat {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+/*分页器*/
+#pagination .page-number:hover {
+  cursor: url("https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur"), auto;
+}
+/* 分页器的三个点(...) */
+.space {
+  color: #00c4b6;
+}
+.col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+  width: 123%;
+  left: -23%;
+}
+@media (max-width: 767px) {
+  .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+    width: 100%;
+    left: 0;
+  }
+}
+@media (max-width: 424px) {
+  .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+    width: 100%;
+    left: 0;
+  }
+}
+.tocbot-active-link {
+  font-weight: bold;
+/*color var(--link-hover-color)*/
+  color: #800000;
+  background: rgba(250,128,114,0.2);
+  border-radius: 5px;
+}
+.toc-list-item::before {
+  background: #800000;
+}
+.markdown-body strong {
+  color: #be0000;
+  font-weight: bold;
+}
+.markdown-body strong {
+  color: #be0000;
+  font-weight: bold;
+}
