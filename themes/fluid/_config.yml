@@ -221,6 +221,10 @@ color:
   button_hover_bg_color: "#f2f3f5"
   button_hover_bg_color_dark: "#46647e"
 
+  # 胡言乱语背景色
+  talking_bg_color: "rgba(249, 250, 251, 1)"
+  talking_bg_color_dark: "rgba(55, 65, 81, 1)"
+
 # 主题字体配置
 # Font
 font:
@@ -397,6 +401,7 @@ navbar:
       ]
     }
     - { key: "音乐", link: "/playlist/", icon: "iconfont icon-music" }
+    - { key: "胡言乱语", link: "/talking/", icon: "iconfont icon-tumblr-fill" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
@@ -1091,6 +1096,22 @@ links:
     type: disqus
 
 #---------------------------
+# 随口胡说页
+# Talking Page
+#---------------------------
+talking:
+  enable: true
+  banner_img:
+  banner_img_height: 60
+  banner_mask_alpha: 0.3
+  subtitle:  # 打字机内容
+  artitalk:
+    appId: hzCnIx7vpFFErZWRy4ccZbOp-gzGzoHsz
+    appKey: ry7UUcwK8nbm9XC201iKn9WN
+    serverURL: https://hzcnix7v.lc-cn-n1-shared.com
+    atComment: true # 是否开启说说评论
+    cssurl: https://cdn.staticaly.com/gh/spaceskynet/Artitalk/master/dist/css/artitalk.min.css # 魔改版本的 css
+#---------------------------
 # 以下是配置 JS CSS 等静态资源的 URL 前缀，可以自定义成 CDN 地址，
 # 如果需要修改，最好使用与默认配置相同的版本，以避免潜在的问题，
 # ** 如果你不知道如何设置，请不要做任何改动 **
@@ -1146,5 +1167,7 @@ static_prefix:
   twikoo: https://lib.baomitu.com/twikoo/1.6.7/
 
   hint: https://lib.baomitu.com/hint.css/2.7.0/
+
+  artitalk: https://cdn.staticaly.com/gh/spaceskynet/Artitalk/master/dist/js/
 
 #----------------------其他自定义配置---------------------
