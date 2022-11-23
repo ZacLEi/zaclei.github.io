@@ -225,7 +225,7 @@ color:
 # Font
 font:
   font_size: 16px
-  font_family:
+  font_family: "Gill Sans"
   letter_spacing: 0.02em
   code_font_size: 85%
 
@@ -239,17 +239,48 @@ custom_js:
   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/star.js # 鼠标跟随小星星
 #   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js # 鼠标点击出字
   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/love.js #鼠标点击出爱心
+  - /assets/xiaoxingxing.js
+  - /assets/yinghua.js
+  - /assets/vanilla-tilt.js
+  - /assets/postcard.js
 
 custom_css:
-  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/shubiao.css #鼠标指针
+#  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/shubiao.css #鼠标指针
   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css # 滚动条颜色
   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css # 头部打字机颜色效果渐变
+  - /css/custom
+  - /assets/waifu.css
+  - /assets/flat-ui.min.css
+  - /assets/shubiao.css
+  - /assets/postcard.css
 
 # 添加一言 <p id="hitokoto">:D 获取中...</p>
 custom_head: '
     <!-- 一言 -->
     <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
     '
+
+custom_html: '
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<div class="waifu" id="waifu" style="z-index: 1000;">
+    <div class="waifu-tips" style="opacity: 1;"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+<script src="/assets/live2d.min.js"></script>
+<script src="/assets/waifu-tips.js"></script>
+<script type="text/javascript">
+    initModel()
+</script>
+'
 
 # 网页访问统计
 # Analysis of website visitors
@@ -364,6 +395,15 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - {
+      key: '文档',
+      icon: 'iconfont icon-books',
+      submenu: [
+        { key: '主题博客', link: 'https://hexo.fluid-dev.com/' },
+        { key: '配置指南', link: 'https://hexo.fluid-dev.com/docs/guide/' },
+        { key: '图标用法', link: 'https://hexo.fluid-dev.com/docs/icon/' }
+      ]
+    }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
@@ -481,7 +521,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/default.png
+  banner_img: /img/home_background.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -505,11 +545,11 @@ index:
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
     api:
-      enable: false
+      enable: true
 
       # 请求地址
       # Request url
-      url: ""
+      url: "https://v1.hitokoto.cn/?c=a&c=b"
 
       # 请求方法
       # Request method
@@ -522,7 +562,7 @@ index:
 
       # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
       # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
-      keys: []
+      keys: ["hitokoto"]
 
   # 自动截取文章摘要
   # Auto extract post
