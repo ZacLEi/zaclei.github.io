@@ -74,7 +74,7 @@ dream:
 music:
   enable: true
   title: #非吸底模式有效
-    enable: false
+    enable: true
     show: 听听音乐
   autoHide: true    # hide automaticaly
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
@@ -317,15 +317,19 @@ livere:
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: false
-  appId:
-  appKey:
-  notify: false
-  verify: false
+  appId: hzCnIx7vpFFErZWRy4ccZbOp-gzGzoHsz
+  appKey: ry7UUcwK8nbm9XC201iKn9WN
+  notify: true
+  verify: true
   visitor: true
   avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
-  placeholder: 'just go go' # Comment Box placeholder
+  placeholder: '记得留下邮箱，以便收到回复提醒⏰～' # Comment Box placeholder
   background: /medias/comment_bg.png
+  guest_info: nick,mail,link
+  language: zh-cn
+  comment_count: true
+  recordIP: false
 
 # The configuration of the MiniValine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.

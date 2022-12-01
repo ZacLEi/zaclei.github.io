@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>常用链接</title>
+      <link href="/2022/12/01/chang-yong-lian-jie/"/>
+      <url>/2022/12/01/chang-yong-lian-jie/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://marmalade.vip/Materysettings1.html" target="_blank" rel="noopener">https://marmalade.vip/Materysettings1.html</a><br>搜索常用emoji<br><a href="https://www.webfx.com/tools/emoji-cheat-sheet/%E5%8F%AF%E4%BB%A5%E6%90%9C%E7%B4%A2%E5%B8%B8%E7%94%A8%E8%A1%A8%E6%83%85%E5%AF%B9%E5%BA%94%E4%BB%A3%E7%A0%81" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/可以搜索常用表情对应代码</a></p><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>    alasdjlkasjdlasjdlasd        <span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/12/01/hello-world/"/>
       <url>/2022/12/01/hello-world/</url>

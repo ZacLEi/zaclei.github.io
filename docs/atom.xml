@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>ZacLei</title>
   
   
   <link href="https://zaclei.github.io/atom.xml" rel="self"/>
   
   <link href="https://zaclei.github.io/"/>
-  <updated>2022-12-01T08:37:34.869Z</updated>
+  <updated>2022-12-01T09:20:29.672Z</updated>
   <id>https://zaclei.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用链接</title>
+    <link href="https://zaclei.github.io/2022/12/01/chang-yong-lian-jie/"/>
+    <id>https://zaclei.github.io/2022/12/01/chang-yong-lian-jie/</id>
+    <published>2022-12-01T09:18:45.000Z</published>
+    <updated>2022-12-01T09:20:29.672Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://marmalade.vip/Materysettings1.html&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
