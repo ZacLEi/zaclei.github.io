@@ -236,19 +236,20 @@ font:
 custom_js:
   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.js # 动态彩带
 #  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/runtime.min.js # 运行时间
-  # - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Ribbon.min.js # 静态彩带
+# - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Ribbon.min.js # 静态彩带
   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicLine.js # 动态黑色线条
-  # - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/snowflake.min.js # 小雪花飘落
-  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Cherry.js #樱花飘落
-  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/star.js # 鼠标跟随小星星
-#   - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js # 鼠标点击出字
-  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/love.js #鼠标点击出爱心
-  - /assets/xiaoxingxing.js
-  - /assets/yinghua.js
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/snowflake.min.js # 小雪花飘落
+#  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Cherry.js #樱花飘落
+#  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/star.js # 鼠标跟随小星星
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js # 鼠标点击出字
+#  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/love.js #鼠标点击出爱心
+#  - /assets/xiaoxingxing.js
+#  - /assets/yinghua.js
   - /assets/vanilla-tilt.js
   - /assets/postcard.js
 #  - //cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js  #/APlayer#/APlayer依赖
 #  - //cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js  #/APlayer依赖
+  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/qipao.js #头部上升气泡
 
 
 custom_css:
@@ -853,18 +854,18 @@ valine:
   appId: hzCnIx7vpFFErZWRy4ccZbOp-gzGzoHsz
   appKey: ry7UUcwK8nbm9XC201iKn9WN
   path: window.location.pathname
-  placeholder: 说点什么
+  placeholder: 记得留下邮箱，以便收到回复提醒⏰～
   avatar: 'retro'
   meta: ['nick', 'mail', 'link']
   requiredFields: []
   pageSize: 10
   lang: 'zh-CN'
-  highlight: false
-  recordIP: false
+  highlight: true
+  recordIP: true
   serverURLs: ''
   emojiCDN:
   emojiMaps:
-  enableQQ: false
+  enableQQ: true
 
 # Waline
 # 从 Valine 衍生而来，额外增加了服务端和多种功能
